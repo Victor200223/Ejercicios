@@ -1,0 +1,8 @@
+.botonAgregar {
+  text-decoration: none;
+}
+.botonAgregar:hover {
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3);
+  transition: 2s;
+}
