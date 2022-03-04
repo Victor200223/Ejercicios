@@ -44,7 +44,7 @@ function EjecicioNuevo() {
     } else {
       setEjercicios([
         ...ejercicios,
-        { id: Math.floor(Math.random() * 9999), ...estado },
+        { ...estado, id: Math.floor(Math.random() * 9999) },
       ]);
     }
 

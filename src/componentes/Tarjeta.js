@@ -28,7 +28,11 @@ const Tarjeta = ({
   };
 
   return (
-    <div onClick={onClick} className="tarjeta-contenedor">
+    <div
+      onClick={onClick}
+      className="tarjeta-contenedor"
+      style={{ cursor: "pointer" }}
+    >
       <div
         className="tarjeta mx-auto fitness-tarjeta"
         style={{

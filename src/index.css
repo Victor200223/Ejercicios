@@ -2,5 +2,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: fantasy;
+  font-family: "Montserrat", sans-serif !important;
+}
+button:hover {
+  cursor: pointer;
+}
+
+a:hover {
+  cursor: pointer;
 }

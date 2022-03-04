@@ -12,8 +12,12 @@ function Ejecicios() {
   return (
     <div className="container">
       <Bienvenida usuario="Victor" />
-      <BotonAgregar />
-      <EjeciciosLista ejercicios={ejercicios} />
+      <div className="row">
+        <div className="col-12">
+          <BotonAgregar />
+          <EjeciciosLista ejercicios={ejercicios} />
+        </div>
+      </div>
       <MiModal />
     </div>
   );

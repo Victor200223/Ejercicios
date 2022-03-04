@@ -39,19 +39,20 @@ const MiModal = () => {
     ejercicioSeleccionado || {};
 
   return (
-    <div className="container align-middle ">
+    <div className="container align-middle">
       <Modal show={modalVisible} onHide={cerrarModal} className="cc">
         <div
           style={{
             backgroundImage: `url(${circulos}),linear-gradient(to right, ${colorIzquierda}, ${colorDerecha})`,
+            borderRadius: 8,
           }}
         >
           <Modal.Header closeButton>
             <Modal.Title>{titulo}</Modal.Title>
           </Modal.Header>
           <Modal.Body className="text-center">
-            <img src={imagen} alt="" />
-            <p>{descripcion}</p>
+            <img src={imagen} alt="" style={{ maxWidth: "50%" }} />
+            <p style={{ wordBreak: "break-all" }}>{descripcion}</p>
           </Modal.Body>
           <Modal.Footer>
             <div
@@ -68,9 +69,6 @@ const MiModal = () => {
               </button>
               <button type="button" className="btn editar" onClick={editar}>
                 <AiFillEdit />
-              </button>
-              <button type="button" className="btn cerrar"  onClick={cerrar}>
-                <IoIosCloseCircle />
               </button>
             </div>
           </Modal.Footer>

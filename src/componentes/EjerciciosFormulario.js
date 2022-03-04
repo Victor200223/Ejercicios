@@ -12,8 +12,10 @@ const EjeciciosFormulario = ({
 
   return (
     <div className="container">
+      <h2>{modoEdicion ? "Editar tarjeta" : "Crear tarjeta"}</h2>
       <form onSubmit={onSubmit} className="row gx-3 gy-2 ">
         <div className="form-group">
+          <label htmlFor="titulo">Titulo</label>
           <input
             type="text"
             className="form-control "
@@ -28,9 +30,10 @@ const EjeciciosFormulario = ({
           />
         </div>
         <div className="form-group">
+          <label htmlFor="descripcion">Descripcion</label>
           <textarea
             type="text"
-            className="form-control"
+            className="form-control mt-1"
             placeholder="descripcion"
             name="descripcion"
             onChange={onChange}
@@ -41,9 +44,10 @@ const EjeciciosFormulario = ({
           />
         </div>
         <div className="form-group">
+          <label htmlFor="imagen">Imagen</label>
           <input
             type="text"
-            className="form-control"
+            className="form-control mt-1"
             placeholder="imagen"
             name="imagen"
             onChange={onChange}
@@ -52,19 +56,22 @@ const EjeciciosFormulario = ({
         </div>
 
         <div className="col-6">
+          <label htmlFor="colorIzquierda">Color izquierda</label>
           <input
-            type="text"
-            className="form-control"
+            type="color"
+            className="form-control mt-1"
             placeholder="colorIzquierda"
             name="colorIzquierda"
             onChange={onChange}
             value={colorIzquierda}
           />
         </div>
+
         <div className="col-6">
+          <label htmlFor="colorDerecha">Color derecha</label>
           <input
-            type="text"
-            className="form-control"
+            type="color"
+            className="form-control mt-1"
             placeholder="colorDerecha"
             name="colorDerecha"
             onChange={onChange}
@@ -72,16 +79,23 @@ const EjeciciosFormulario = ({
           />
         </div>
 
-        <button type="submit" className="btn btn-outline-success col-6">
-          {modoEdicion ? "Editar" : "Crear"}
-        </button>
-        <button
-          type="submit"
-          className="btn btn-outline-danger col-6"
-          onClick={onCancel}
-        >
-          Cancelar
-        </button>
+        <div className="col-12 d-flex justify-content-between mt-3">
+          <button
+            type="submit"
+            className="btn btn-outline-success col-6"
+            style={{ width: "49%" }}
+          >
+            {modoEdicion ? "Editar" : "Crear"}
+          </button>
+          <button
+            type="submit"
+            className="btn btn-outline-danger col-6"
+            onClick={onCancel}
+            style={{ width: "49%" }}
+          >
+            Cancelar
+          </button>
+        </div>
       </form>
     </div>
   );
